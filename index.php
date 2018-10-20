@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light ">
 			<div class="container">
@@ -79,13 +80,27 @@
 		</div>
 		</div>
 	</header>
-	<div class="content">
-		<div class="row align-items-start justify-content-center">
-			<div class="col-lg-12 dbline">
-				<span><a class="about" href="#">About</a></span>
+	<div class="container-fluid">
+		<div class="row justify-content-center about">
+			<div class="col-lg-auto my-auto shrink">
+				<a href="#"><button type="button" onclick="toggle('#menu-1');" class="btn btn-default">About</button></a>
 			</div>
 		</div>
-	</div>
+		<div class="row justify-content-center">
+			<div id="menu-1" class="col-lg-12">
+					<h1>Wedding Dresses London</h1>
+					<p><strong>We are one of London’s leading bridal shops with over 35 years of expertise and knowledge in the bridal profession.</strong></p>
+					<p><strong>We are one of London’s leading bridal shops with over 35 years of expertise and knowledge in the bridal profession.</strong></p>
+					<p>When you visit our store you will be helped by our friendly, professional team of bridal consultants who will assist you in the choice of your gown. We offer an in-house alteration service where you will have an appointment to ensure your gown fits perfectly and makes you look and feel sensational for your special day. We also have a wide range of gowns that are available to buy off the rail and a large selection of sizes (including plus sizes) are always in stock. Private fittings are available on request.</p>
+					<p>If you have any questions, please feel free to give us a call on 020 7703 6796, alternatively, you can book an appointment online by filling in the form at the bottom of the page.</p>
+					<p><strong>We are one of London’s leading bridal shops with over 35 years of expertise and knowledge in the bridal profession.</strong></p>
+					<p>We stock a huge selection of designer wedding gowns featuring both contemporary and classic designs to ensure that you will be able to find the perfect dress for your special day.</p>
+					<p>When you visit our store you will be helped by our friendly, professional team of bridal consultants who will assist you in the choice of your gown. We offer an in-house alteration service where you will have an appointment to ensure your gown fits perfectly and makes you look and feel sensational for your special day. We also have a wide range of gowns that are available to buy off the rail and a large selection of sizes (including plus sizes) are always in stock. Private fittings are available on request.</p>
+					<p>If you have any questions, please feel free to give us a call on 020 7703 6796, alternatively, you can book an appointment online by filling in the form at the bottom of the page.</p>
+				</div>
+		</div>
+				
+			</div>
 
 
 
