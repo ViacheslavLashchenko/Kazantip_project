@@ -37,7 +37,7 @@ a:hover {text-decoration: none; color: #4F4F4F;}
 .navbar-toggler{
   background:#fff !important;
 }
-a > img{
+.navbar-brand{
 	max-width: 340px;
 	max-height:50px;
 }
@@ -47,4 +47,9 @@ font-size: 60px;
 .about{
 	background-color: #f2f2f2;
 	height: 93px;
+}
+@media screen and (max-device-width: 442px){
+	.navbar-brand{
+	max-width: 70%;
+}
 }
