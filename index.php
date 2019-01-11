@@ -43,50 +43,46 @@
             </div>
         </nav>
         <!-- <div style="clear: both"></div> -->
-        <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div class="container-fluide">
+         <div id="carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="img-fluid" src="images/Bridal-Dresses-London-2.png" alt="...">
-                    <div class="carousel-caption centered">
-                        <span class="slide-title">Dresses Available Today</span>
-                        <small>
-			<h3>Dresses Available To Buy Immediately in sizes 4-26</h3>
-			<h4>Call 020 7703 6796 To Book Your Appointment</h4>
-		</small>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="img-fluid" src="images/Bridal-Dresses-London-2.png" alt="...">
-                    <div class="carousel-caption centered">
-                        <span class="slide-title">Dresses Available Today</span>
-                        <small>
+                    <img src="images/Bridal-Dresses-London-2.png" alt="...">
+                   <!--  <div class="carousel-caption">
+                        <h1>Dresses Available Today</h1>
 						<h3>Dresses Available To Buy Immediately in sizes 4-26</h3>
 						<h4>Call 020 7703 6796 To Book Your Appointment</h4>
-					</small>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="carousel-item">
-                    <img class="img-fluid " src="images/Bridal-Dresses-London-2.png" alt="...">
-                    <div class="carousel-caption centered">
-                        <span class="slide-title">Dresses Available Today</span>
-                        <small>
+                    <img src="images/Bridal-Dresses-London-2.png" alt="..." >
+                   <!--  <div class="carousel-caption">
+                        <h1>Dresses Available Today</h1>
 						<h3>Dresses Available To Buy Immediately in sizes 4-26</h3>
 						<h4>Call 020 7703 6796 To Book Your Appointment</h4>
-					</small>
-                    </div>
+                    </div> -->
                 </div>
+                <div class="carousel-item">
+                    <img src="images/Bridal-Dresses-London-2.png" alt="...">
+                    <!-- <div class="carousel-caption">
+                        <h1>Dresses Available Today</h1>
+						<h3>Dresses Available To Buy Immediately in sizes 4-26</h3>
+						<h4>Call 020 7703 6796 To Book Your Appointment</h4>
+                    </div> -->
+                </div>
+            </div>
             </div>
         </div>
     </header>
     <div class="container-fluid">
         <div class="row justify-content-center about">
-            <div class="col-auto my-auto shrink">
-                <button type="button" onclick="toggle('#menu-1');" class="btn btn-default">About</button>
+            <div class="col-auto my-auto">
+                <button type="button" onclick="toggle('#menu-1');" class="btn btn-about">About</button>
             </div>
         </div>
         <div class="row justify-content-center">
             <div id="menu-1" class="col-lg-12">
-                <h1>Wedding Dresses London</h1>
+                <h1 class="single-post">Wedding Dresses London</h1>
                 <p><strong>We are one of London’s leading bridal shops with over 35 years of expertise and knowledge in the bridal profession.</strong></p>
                 <p><strong>We are one of London’s leading bridal shops with over 35 years of expertise and knowledge in the bridal profession.</strong></p>
                 <p>When you visit our store you will be helped by our friendly, professional team of bridal consultants who will assist you in the choice of your gown. We offer an in-house alteration service where you will have an appointment to ensure your gown fits perfectly and makes you look and feel sensational for your special day. We also have a wide range of gowns that are available to buy off the rail and a large selection of sizes (including plus sizes) are always in stock. Private fittings are available on request.</p>

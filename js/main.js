@@ -1,4 +1,6 @@
-﻿$(function() {
+﻿
+// About
+$(function() {
  $("div[id*='menu-']").hide(); 
 })();
 
@@ -20,3 +22,5 @@ function toggle(objName) {
  }
  }
 }
+
+
