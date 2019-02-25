@@ -1,100 +1,49 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+/*Спецификация*/
 
-body{
-	font-family: "Open Sans","Helvetica Neue",Helvetica,sans-serif;
+body {
+	font-family: 'PT Sans', sans-serif;
 }
-h1{
-	font-family: 'Playfair Display';
-}
-h1, h2, h3, h4, h5, h6{
-	line-height: 1.2em;
-}
-.remove-all-margin{
-margin:0 ! important;
-}
-a {text-decoration: none; color: #4F4F4F ;}
-a:hover {text-decoration: none; color: #4F4F4F;}
 
-.navbar , .carousel-caption{
-	font-family: 'Playfair Display', serif;
+/* 
+
+ul, li {
+
+	display: block;
+	padding: 0;
+	margin: 0;
 }
-.navbar{
-	min-height: 120px;
-	background-color: #fff !important;
+
+Первый экран
+
+header {
+	height: 78px;
+	background-color: grey;
+	text-decoration-color: #555555;
+	padding-top: 19px;
+}
+
+a img.logo{
+	height: 50px;
+	min-height: 30px;
+	display: block;
+	max-width: 100%;
+}
+
+.menu {
+	
+}
+.left-menu{
+	margin-left: -100px;
+}
+
+.menu__item {
+margin: 0 20px;
+}
+
+.menu__item a {
+	font-size: 12px;
+	font-weight: 700;
 	text-transform: uppercase;
-	font-weight: 600;
-	font-size: 11px;
-	letter-spacing: 2px;
-
-}
-.nav-link{
-	margin-right: 1em !important;
-	color: #4F4F4F !important;
-	cursor: pointer;
-}
-
-.nav-link:hover{
-	opacity: 0.6
-}
-.active > a{
-	border-bottom: 1px solid #a4d1de;
-}
-.navbar-collapse{
- justify-content: flex-end;
-}
-.navbar-toggler{
-  background:#fff !important;
-}
-
-.navbar-brand{
-	max-width: 340px;
-	max-height:50px;
-}
-@media screen and (max-device-width: 442px){
-	.navbar-brand{
-	max-width: 70%;
-}
-}
-.carousel {
-  height: 616px !important;
-  overflow: hidden;
-}
-.carousel-inner {
-  overflow: visible;
-}
-.carousel-inner img {
-  left: 45%;
-  max-width: none !important;
-  min-height: 616px;
-  min-width: 100%;
-  position: absolute;
-  top: 308px;
-  transform: translate(-50%,-50%);
-}
-
-.about{
-	background-color: #f2f2f2;
-	height: 93px;
-	opacity: 0.8;
-}
-.btn-about{
-color: #b5b5b5;
-text-transform: uppercase;
-font-size: 14px;
-letter-spacing: 2px !important;
-font-weight: 300;
-background-color: #f2f2f2;
-}
-
-.btn-about:active, .btn-about:focus {
-  box-shadow: none !important;
-}
-
-#menu-1{
-	background-color: #f2f2f2;
-	padding: 20px 60px;
-	opacity: 0.8;
-}
-.single-post{
-font-size: 25px
-}
+	letter-spacing: 0.5px;
+	color: #555555;
+} */
