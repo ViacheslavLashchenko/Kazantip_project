@@ -20,7 +20,7 @@
                     <div class="col-lg">
                         <div class="logo">
                             <a href="#">
-                                <img src="images/" alt="">
+                                <img src="img/" alt="">
                             </a>
                         </div>
                     </div>
