@@ -4,7 +4,7 @@ html{
 }
 body {
 	font-family: 'PT Sans', sans-serif;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 }
 
 ::placeholder {
@@ -27,9 +27,15 @@ button {
 	outline: none !important;
 }
 
+
+.noscroll{
+	overflow: hidden;
+}
+
 /*Шапка*/
 
 .top-nav{
+	border-bottom: 0.8px solid #e4e4e4;
 	background-color: #fff;
 	padding: 0 18px;
 }
@@ -86,69 +92,111 @@ button {
 }
 
 
+/*Выпадающее меню Designers*/
+.designers {
 
-.top-nav_menu .data-time{
-	font-weight: 700;
-	vertical-align: middle;
-	text-transform: none;
-}
-
-
-.top-nav_menu .data-time .grey{
-	color: #a9a9a9;
-}
-
-
-
-.top-nav .form-inline{
-	top: 15px;
-	position: relative;
-	border-radius: 50px;
-	background: #ffffff;
-	border: 1px solid #e4e4e4;
-	width: 200px;
-	height: 32px;
-	margin: 7px;
-}
-
-
-.top-nav .form-inline .form-search{
-	font-size: 12px;
-	width: 100%;
-	padding: 8px 40px 8px 15px;
-	height: 100%;
-	color: #333;
-	background: 0 0;
-	border: none;
-}
-
-.top-nav .form-inline .form-search::placeholder{
-	font-size: 12px;
-}
-
-.top-nav .form-inline .search-btn{
-	font-size: 14px;
+	display: none;
 	position: absolute;
-	width: 40px;
-	top: 8px;
-	right: 0;
-	border: none;
+	z-index: 5;
+}
+
+.drop-down_menu{
+	width: 100%;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	flex-wrap: wrap;
+	display: flex;
+	overflow: hidden;
+	background: #ffffff;
+	margin-top: 0px;
+	opacity: 1;
+	transition-timing-function: ease-in;
+	transition-property: margin-top,opacity,visibility;
+	max-width: 100%;
+	transition-duration: .3s;
+	min-height: 0 !important;
+	visibility: visible;
+	padding: 10px;
+
+}
+
+
+.drop-down_menu li{
+	list-style: none;
+	width: 33.33333333%;
 	background: 0 0;
-	cursor: pointer;
-	color: #1e1e1e;
-	font-family: FontAwesome !important;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	transition: all 0.3s ease-in-out;
+	text-transform: none;
+	overflow: visible;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	line-height: 1.3em;
+	border: none;
+	border-radius: 0;
 }
 
-.top-nav .form-inline .search-btn:hover{
-	opacity: 0.8;
+
+.drop-down_menu li a{
+	position: relative;	
+	overflow: hidden;
+	height: 10vw;
+	z-index: 6;
+	font-weight: bold;
+	background-color: #222222;	
+	display: block;
+	padding: 0px !important;
+	margin: 0.5vw;
 }
 
+
+
+.drop-down_menu li a img{
+	filter: grayscale(100%);
+	position: relative;	
+	backface-visibility: hidden;
+	z-index: 10;
+	border: 1px solid #222222;
+	opacity: 0.6;
+	transition: opacity 1s ease;
+	max-width: 100%;
+	min-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.drop-down_menu li a img:hover{
+	filter: none;
+	opacity: 1;
+}
+
+.drop-down_menu li a span{
+	display: block;
+	clear: none;
+	text-transform: uppercase;
+	z-index: 8;
+	padding: 10px 0 0 0;
+	position: absolute;
+	left:0;
+	top: 40%;
+	width: 100%;
+	font-weight: 700;
+	font-size: 18px !important;
+	color: #ffffff;
+	text-align: center !important;
+}
+
+
+/*Правый бок шапки*/
+
+.menu-right{
+	display: none;
+}
 
 .menu-right-button{
 	border: none;
@@ -462,7 +510,19 @@ li.sub2 a:hover{
 	border: 1px solid black;
 }
 
+.carousel-fade .carousel-item img {
+	width: 100%;
+}
 
+.carousel-control-prev{
+	width:80px;
+	text-align: left;
+}
+
+.carousel-control-next{
+	width:80px;
+	text-align: right;
+}
 .carousel-control-prev-icon, .carousel-control-next-icon{
 	top: 50%;
 	bottom: 50%;
@@ -475,44 +535,19 @@ li.sub2 a:hover{
 	font-size: 70px;
 }
 
-.slider .carousel-control-prev{
-	margin-left: -5%;
-}
 
-.slider .carousel-control-next{
-	margin-right: -5%;
-}
+
+
 
 
 /*Секция About*/
 
 .about{
+	padding-top: 25px; 
 	background-color: #f4f4f4;
 }
 
-.hider{
-	height: 70px;
 
-}
-.col-lg a.togl-btn{
-	display:inline-block;
-	width: 100%;
-	text-align: center;
-	line-height: 5.5em;
-	font-family: FontAwesome;
-	font-weight: 400;
-	font-size: 13px;
-	text-decoration: inherit;
-	font-style: normal;
-	color: #1e1e1e;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-}
-
-
-#hide{
-	max-width: 850px;
-}
 
 #hide h1{
 	font-weight: 700;
@@ -540,121 +575,9 @@ li.sub2 a:hover{
 
 
 .main_content_1 .container{
-	padding: 4vw 1vw 8vw;
+	padding: 4vw 1vw 4vw;
 }
 
-
-.bg .col-lg{
-	margin: 0px 0px 6vw;
-	padding: 0;
-	height: 300px;
-	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/Bridal-Designer-Days.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
-
-.cell-content{
-	padding: 20px !important;
-	text-align: center;
-	z-index: 100;
-}
-
-
-.cell-text{
-	letter-spacing: -0.02em;
-	line-height: 1;
-	margin: 0 0 20px 0 !important;
-}
-
-
-h2.pltext{
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 4em;
-	margin: 0px;
-	letter-spacing: 0px;
-}
-
-
-
-.border_promo{
-	text-align: center;
-	color: #ffffff;
-	display: inline-block !important;
-	padding: 15px 60px;
-	border: 8px solid #ffffff;
-}
-
-
-.promo1{
-	font-size: 40px;
-	line-height: 40px;
-	text-transform: uppercase;
-	font-family: 'PT Sans', sans-serif;
-	margin-bottom: 5px;
-}
-
-
-.promo2{
-	font-size: 19px;
-	line-height: 20px;
-	text-transform: uppercase;
-	font-family: 'PT Sans', sans-serif;
-	opacity: 0.8;
-}
-
-
-.promo3{
-	margin-top: 20px;
-	font-size: 34px;
-	line-height: 20px;
-	text-transform: uppercase;
-	font-family: 'PT Sans', sans-serif;
-	font-weight: 400;
-	opacity: 1;
-	color: #ffffff;
-}
-
-
-.promo3 span{
-	border-bottom: 2px dotted #ffffff;
-}
-
-
-.promo4 {
-	color: #ffffff;
-	padding: 30px 0 0 0;
-	font-size: 12px;
-	font-weight: 100;
-	letter-spacing: 2px;
-	font-family: 'PT Sans', sans-serif;
-	text-transform: uppercase;
-}
-
-
-.cell-btn {
-	color: #fff;
-	border: 1px dotted #fff;
-	font-family: 'PT Sans', sans-serif;
-	padding: 8px 40px;
-	font-size: 12px;
-	border-radius: 0px;
-	font-weight: 100;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	transition: 0.5s;
-
-}
-
-
-a.cell-btn:hover {
-	color: #fff;
-	cursor: pointer;
-	background-color: rgba(255, 255, 255, 0.1);
-
-
-}
 /*Заголовок подсекции 1*/
 
 .text-space .col-lg{
@@ -664,6 +587,7 @@ a.cell-btn:hover {
 
 
 h5.shortunderline {
+	letter-spacing: 3px;
 	margin-top: 20px;
 	font-size: 18px;
 	line-height: 1.5;
@@ -676,7 +600,7 @@ h5.shortunderline {
 	content: "";
 	border-bottom: 2px #1e1e1e solid;
 	display: block;
-	width: 80px;
+	width: 125px;
 	margin: 10px auto 20px;
 }
 
@@ -707,6 +631,7 @@ h5.shortunderline {
 
 
 .pl-pictures-item:hover img{
+	filter: none;
 	transform: scale(1.03) !important;
 	opacity: 1 !important;
 
@@ -722,6 +647,7 @@ h5.shortunderline {
 
 
 .inner-wrap img{
+	filter: grayscale(100%);
 	transition: all .4s;
 	display: block;
 	opacity: .8 !important;
@@ -765,46 +691,11 @@ h5.shortunderline {
 
 
 
-/*Стекло*/
-
-
-
-.window{
-	min-height: 600px;
-	background: url("../images/Cheap-Wedding-Dresses.jpg") no-repeat scroll center -24px / cover;
-}
-
-
-.window-text{
-	min-height: 600px;
-}
-
-
-
-.text img{
-	max-width: 60px;
-}
-
-
-.text h2{
-	text-transform: uppercase;
-	font-size: 2.2em;
-	font-weight: 700;
-}
-
-
-.text h6{
-letter-spacing: 2px;
-text-transform: uppercase;
-font-weight: 700;
-}
-
-
 /*Контент 2*/
 
 
 .main_content_2 .container{
-	padding: 6vw 1vw;
+	padding: 0 1vw 4vw 1vw;
 }
 
 
@@ -855,15 +746,17 @@ margin-bottom: 20px;
 	padding: 4vw 1vw 1.5vw;
 }
 
-.gallery{
+
+.gallery-items div{
+	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
-.gallery-items .col-lg-3{
-	padding: 0 10px 0 10px;
+.gallery-items a{
+	height: 90%;
+	display: block;
 }
-
-.gallery-items .col-lg-3 img{
+.gallery-items div img{
 	width: 100%;
 	height:100%;
 	filter: grayscale(100%);
@@ -871,14 +764,15 @@ margin-bottom: 20px;
 }
 
 
-.gallery-items .col-lg-3 img:hover{
-	filter: grayscale(0%);
+.gallery-items div img:hover{
+	filter: none;
 }
 
 
 
 
 .gallery-text-title{
+	display: block;
 	cursor: default;
 	margin-top: 5px;
 	font-size: 12px;
@@ -890,7 +784,7 @@ margin-bottom: 20px;
 
 .gallery-text-description{
 	cursor: default;
-	display: inline-block;
+	display: block;
 	font-size: 12px;
 	font-weight: normal;
 	padding-bottom: 5px;
@@ -901,7 +795,7 @@ margin-bottom: 20px;
 
 
 .gallery-all{
-	padding-top: 18px;
+	padding-top: 30px;
 }
 
 
@@ -937,44 +831,6 @@ margin-top: -4px;
 max-width: 40px;
 margin-left: 5px;
 }
-
-
-/*Стекло2*/
-
-
-
-.window2{
-	min-height: 600px;
-	background: url("../images/Plus-Size-Wedding-Dresses-London-1.png") no-repeat scroll center -24px / cover;
-}
-
-
-.window2 .window-text{
-	min-height: 600px;
-}
-
-
-
-.window2 .text img{
-	max-width: 60px;
-}
-
-
-.window2 .text h2{
-	text-transform: uppercase;
-	font-size: 2.2em;
-	font-weight: 700;
-}
-
-
-.window2 .text h6{
-	margin: 0 0 10px 0;
-	opacity: 0.6;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	font-weight: 700;
-}
-
 
 /*Секция 3*/
 
@@ -1074,7 +930,7 @@ margin-left: 5px;
 
 
 .inform{
-	padding: 1vw 0px 6vw;
+	padding: 3vw 0px 3vw;
 }
 
 
@@ -1087,29 +943,17 @@ padding-left: .5em;
 
 
 
-.inform .contacts{
-	padding-right: 1em;
-}
-
-
-
-.inform .location{
-	padding-left: 1em;
-}
-
 .inform .contacts-wrap{
 	height: 500px;
 	background-image: url(../images/BridalStoreLondon.png);
 	background-size: cover;
-
-
 }
 
 
 
 .contacts-text{
 	position: absolute;
-	top: 38%;
+	top: 190px;
 	left: 24%;
 }
 
@@ -1147,14 +991,78 @@ margin-right: 7px;
 
 
 
-.inform .location{
-	filter: grayscale(100%);
+
+.inform form{
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: auto;
+}
+
+.inform form label{
+	margin-top: 20px;
+	color: #1e1e1e;
+	font-size: 18px;
+	line-height: 28px;
+	text-transform: uppercase;
+}
+
+
+.inform form input[type="text"], input[type="email"], input[type="tel"]{
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	height: 50px;
+	padding: 15px;
+	width: 100%;
+	color: #000000;
+	font-size: 12px;
+	margin-bottom: 12px;
+}
+
+.inform form textarea{
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	padding: 15px;
+	width: 100%;
+	color: #000000;
+	font-size: 12px;
 }
 
 
 
+.inform form input[type="submit"]{
+	width: 100%;
+	height: 50px;
+	background-color: #1e1e1e;
+	color: #fff;
+	border-radius: 4px;
+	margin-top: 20px;
+	text-transform: uppercase;
+	border: none;
+	transition: all 0.3s ease-in-out;
+
+}
+
+.inform form input[type="submit"]:hover{
+	opacity: .8;
+}
+
+.error-box{
+    color: red;
+    font-size: 12px;
+}
+
+
+
+footer{
+background-color: rgb(244, 244, 244);
+}
+
+
 footer .col-lg{
-	padding: 30px 0;
+	padding: 1vw 0;
 	text-align: center;
 }
 
@@ -1162,7 +1070,7 @@ footer .col-lg{
 
 footer .small{
 	text-transform: uppercase;
-	font-size: 11px;
+	font-size: 0.6rem;
 	opacity: 0.6;
 	letter-spacing: 0.5px;
 }
@@ -1172,6 +1080,11 @@ footer .small{
 
 footer .small a, footer .small a:hover {
 	color: #b2b2b2;
+ }
+
+ footer p{
+ 	margin-bottom: .6vw;
+
  }
 
 
@@ -1185,4 +1098,140 @@ footer .small a, footer .small a:hover {
 
 .sm_footer a:hover {
 	color: #000;
+}
+
+
+/*Меню Designers*/
+
+.entry-content{
+	padding: 0vw 0vw 3vw;
+}
+.entry-content .designer-description{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 100%;
+	border: 1px solid #e4e4e4;
+	margin-top: 40px;
+	margin-bottom: 60px;
+	padding: 40px;
+}
+
+.designer-description img{
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	cursor: pointer;
+	max-width: 100px;
+	margin-right: 30px;
+	height: auto;
+}
+
+
+.designer-description img:hover{
+	filter: none;
+}
+
+
+.right h2{
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 12px;
+	letter-spacing: 1.5px;
+}
+
+.right h2 a{
+	transition: opacity .2s;
+	color: black;
+}
+
+
+.right h2 a:hover{
+	opacity: .8;
+	color: #b2b2b2;
+}
+
+
+.right h1{
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 15px;
+	font-size: 20px;
+	line-height: 25px;
+	max-width: 500px;
+}
+
+
+.right p{
+font-size: 16px;
+line-height: 26px;
+}
+
+.block-down a img{
+	width: 100%;
+	filter: grayscale(100%);
+	transition: all 0.3s ease-in-out;
+}
+
+.block-down a img:hover{
+	filter: none;
+}
+
+
+.block-down span{
+	color: #303030;
+	padding: 5px 0;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+
+
+
+/*Медиазапрсы*/
+
+@media screen and (max-width: 600px) {
+	.top-nav_menu_container {
+		display: none;
+	}
+
+	.menu-right{
+		display: block;	
+	}
+
+	.top-nav_menu_container img {
+		height: 	
+	}
+
+	.carousel-fade .carousel-item img {
+		width: 150%;
+	}
+
+	
+	.gallery-text-title{
+		padding-left: 10px;
+	}
+
+	.gallery-items div{
+		padding-top: 20px;
+		padding-bottom: 20px;
+}
+
+
+
+	.gallery-text-description{
+		padding-left: 10px;
+	}
+
+}
+
+
+
+@media screen and (max-width: 992px) {
+	.drop-down_menu li a{
+		height: 14vw;
+	}
 }
