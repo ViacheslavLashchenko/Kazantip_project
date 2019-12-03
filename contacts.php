@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION['error']) && !empty($_SESSION['error']))
+        print_r($_SESSION['error'])
+    
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -266,29 +273,6 @@
 		</div>
 	</footer>
 
-	<?php
-
-		if(isset(($_POST['email']))){
-				print_r($_POST);
-			exit;
-
-			$email = $_POST['email'];
-			$name = $_POST['name'];
-			$message = $_POST['message'];
-			$numder = $_POST['number'];
-		
-			$to = "gavrilcbwd78@gmail.com";
-			$from = $_POST['email'];
-			$subject = "От посетителя сайта";
-			$text =  "Написал(а): $name\n Номер телефона - $tell\n Контактный email - $email\n\n Текст письма: $message\n";
-
-			$header.= "Content-type: text/html; charset=utf-8\r\n";
-			$header .= "MIME-Version: 1.0\r\n";
-			$sending = mail($to, $subject, $text, $header);
-
-			if($sending) echo "Письмо отправлено c сервера";
-		}
-	?>
 
 
 	<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
@@ -301,3 +285,9 @@
 </body>
 
 </html>
+<?php
+    if(isset($_SESSION['error']) && !empty($_SESSION['error'])) {
+        unset($_SESSION['error']);
+    }
+
+?>
