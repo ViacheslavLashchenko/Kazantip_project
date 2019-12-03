@@ -62,6 +62,7 @@ $(document).ready(function () {
                     $(this).addClass('not_error')
                     .css('border-color','green')
                     .css('box-shadow','0px 0px 5px green');
+                    $(this).next().fadeOut();
                 }
 
                 // Иначе, мы удаляем класс not-error и заменяем его на класс error, говоря о том что поле содержит ошибку валидации,
@@ -72,6 +73,7 @@ $(document).ready(function () {
                     $(this).removeClass('not_error').addClass('error')
                     .css('border-color','red')
                     .css('box-shadow','0px 0px 5px red');
+                    $(this).next().text("Пожалуйста, введите ваше Имя").fadeIn();
                 }
                 break;
 
@@ -83,12 +85,14 @@ $(document).ready(function () {
                     $(this).addClass('not_error')
                     .css('border-color','green')
                     .css('box-shadow','0px 0px 5px green');
+                    $(this).next().fadeOut();
                 }
                 else
                 {
                     $(this).removeClass('not_error').addClass('error')
                     .css('border-color','red')
                     .css('box-shadow','0px 0px 5px red');
+                    $(this).next().text("Пожалуйста, введите ваш email").fadeIn();
                 }
                 break;
 
@@ -99,12 +103,14 @@ $(document).ready(function () {
                     $(this).addClass('not_error')
                     .css('border-color','green')
                     .css('box-shadow','0px 0px 5px green');
+                    $(this).next().fadeOut();
                 }
                 else
                 {
                     $(this).removeClass('not_error').addClass('error')
                     .css('border-color','red')
                     .css('box-shadow','0px 0px 5px red');
+                    $(this).next().text("Пожалуйста, введите ваш номер телефона").fadeIn();
                 }
                 break;
 
@@ -114,12 +120,14 @@ $(document).ready(function () {
                     $(this).addClass('not_error')
                     .css('border-color','green')
                     .css('box-shadow','0px 0px 5px green');
+                    $(this).next().fadeOut();
                 }
                 else
                 {
                     $(this).removeClass('not_error').addClass('error')
                     .css('border-color','red')
                     .css('box-shadow','0px 0px 5px red');
+                    $(this).next().text("Пожалуйста, введите текст сообщения").fadeIn();
                 }
                 break;
 
