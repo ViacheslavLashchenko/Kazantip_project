@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
 	$('.window, .window2').paroller();
 
 	let timer = null;
