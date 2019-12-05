@@ -1,21 +1,19 @@
 <?php
     session_start();
-        if(isset(($_POST))){
+        if(!empty($_POST)){
 
-            class logStr{}
-            $result = new logStr();
-            
+            $result = [];
             $error = '';
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $number = $_POST['number'];
-            $message = $_POST['message'];
+            $name = trim($_POST['name']);
+            $email = trim($_POST['email']);
+            $number = trim($_POST['number']);
+            $message = trim($_POST['message']);
 
             if (empty($name)) {
-                $result->name_log = "Пожалуйста, введите ваше Имя";
+                $result['name_log'] = "Пожалуйста, введите ваше Имя";
             }
             if (empty($email)) {
-                $result->email_log = "Пожалуйста, введите ваш email";
+                $result['email_log'] = "Пожалуйста, введите ваш email";
             } else{
                 if ($email = "" && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $result->email_log = "Пожалуйста, введите корректный email";
