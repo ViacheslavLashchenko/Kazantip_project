@@ -1,3 +1,4 @@
+'use strict';
 $(document).ready(function() {
     // $('.window, .window2').paroller();
 
@@ -136,9 +137,9 @@ $(document).ready(function() {
                 data: {'name': name, 'email': email, 'number': number, 'message': message},
                 success: function(data) {
                     let checkResultObj = JSON.parse(data);
-                    if(checkResultObj) {
+                    if (checkResultObj) {
                         alert("Спасибо, ваши данные приняты, с вами свяжутся в ближайшее время. Вы будете перенаправлены на главную страницу");
-                        window.location.replace("index.php");
+                        // window.location.replace("index.php");
                     } else {
                         alert("Упс! Что то пошло не так. Попробуйте написать нам позже");
                     }   
