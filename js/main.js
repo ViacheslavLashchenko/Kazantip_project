@@ -139,7 +139,7 @@ $(document).ready(function() {
                     let checkResultObj = JSON.parse(data);
                     if (checkResultObj) {
                         alert("Спасибо, ваши данные приняты, с вами свяжутся в ближайшее время. Вы будете перенаправлены на главную страницу");
-                        // window.location.replace("index.php");
+                        window.location.replace("index.php");
                     } else {
                         alert("Упс! Что то пошло не так. Попробуйте написать нам позже");
                     }   
